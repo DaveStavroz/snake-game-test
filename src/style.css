@@ -99,3 +99,19 @@ button:active {
         font-size: 2em;
     }
 }
+
+.difficulty-selector {
+    margin-bottom: 15px;
+}
+
+.difficulty-selector button {
+    background: linear-gradient(45deg, #4CAF50, #45a049);
+    margin: 0 2px;
+    padding: 8px 15px;
+    font-size: 0.9em;
+}
+
+.difficulty-selector button.active {
+    background: linear-gradient(45deg, #FF9800, #F57C00);
+    box-shadow: 0 0 10px rgba(255, 152, 0, 0.5);
+}

@@ -196,3 +196,32 @@ class SnakeGame {
 document.addEventListener('DOMContentLoaded', () => {
     new SnakeGame();
 });
+
+// Système de niveaux de difficulté
+class DifficultyManager {
+    constructor() {
+        this.levels = {
+            easy: { speed: 200, name: 'Facile' },
+            medium: { speed: 150, name: 'Moyen' },
+            hard: { speed: 100, name: 'Difficile' },
+            expert: { speed: 50, name: 'Expert' }
+        };
+        this.currentLevel = 'medium';
+    }
+    
+    setLevel(level) {
+        if (this.levels[level]) {
+            this.currentLevel = level;
+            return this.levels[level].speed;
+        }
+        return this.levels.medium.speed;
+    }
+    
+    getCurrentSpeed() {
+        return this.levels[this.currentLevel].speed;
+    }
+    
+    getCurrentName() {
+        return this.levels[this.currentLevel].name;
+    }
+}
